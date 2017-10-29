@@ -259,9 +259,9 @@ class SniperAlgo(StAlgoTemplate):
             vtSymbol = order.vtSymbol
             
             # 从委托列表中移除该委托
-            orderList = self.legOrderDict.get(vtSymbol, None)
+            orderList = self.legOrderDict[vtSymbol]
             
-            if orderList and vtOrderID in orderList:
+            if vtOrderID in orderList:
                 orderList.remove(vtOrderID)
                 
             # 检查若是被动腿，且已经没有未完成委托，则执行对冲

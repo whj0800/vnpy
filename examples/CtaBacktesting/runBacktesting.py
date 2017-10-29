@@ -11,7 +11,7 @@ from vnpy.trader.app.ctaStrategy.ctaBacktesting import BacktestingEngine, MINUTE
 
 
 if __name__ == '__main__':
-    from vnpy.trader.app.ctaStrategy.strategy.strategyKingKeltner import KkStrategy
+    from vnpy.trader.app.ctaStrategy.strategy.strategyAtrRsi import AtrRsiStrategy
     
     # 创建回测引擎
     engine = BacktestingEngine()
@@ -32,8 +32,8 @@ if __name__ == '__main__':
     engine.setDatabase(MINUTE_DB_NAME, 'IF0000')
     
     # 在引擎中创建策略对象
-    d = {}
-    engine.initStrategy(KkStrategy, d)
+    d = {'atrLength': 11}
+    engine.initStrategy(AtrRsiStrategy, d)
     
     # 开始跑回测
     engine.runBacktesting()

@@ -2,4 +2,3 @@ pymongo
 websocket-client
 msgpack-python
 qdarkstyle
-SortedContainers

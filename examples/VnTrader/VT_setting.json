@@ -7,12 +7,5 @@
 	"mongoLogging": true,
 
 	"darkStyle": true,
-	"language": "chinese",
-
-	"logActive": true,
-	"logLevel": "debug",
-	"logConsole": true,
-	"logFile": true,
-
-	"tdPenalty": ["IF", "IH", "IC"]
+	"language": "chinese"
 }
